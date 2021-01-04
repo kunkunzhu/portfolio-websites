@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8" />
+    <title>Page Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Nunito+Sans&family=Oxygen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css";>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+
+            <div class="center">
+                <div class="caption">
+                    <div>to create, to learn, to grow.</div>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <div>KUN ZHU</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/art1.jpg)">
+                    </div>
+
+                    <div class="img-text-wrapper">
+                        <div class="title">
+                            Sketchbook.
+                        </div>
+                        <div class="subtitle">
+                            I am willing to continue creating, continue growing. Among imperfect scribbles, through captured snapshots, underneath each word I type, I will continue to express everything I see which I believe to be worthwhile staying for.
+                        </div>
+                    </div>
+
+                
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/uni1.jpg)">
+                    </div>
+
+                    <div class="img-text-wrapper">
+                        <div class="title">
+                            University Reflections.
+                        </div>
+                        <div class="subtitle">
+                            Most of all, the academic journey is about a process of learning & overcoming.
+                            I want to only climb the mountain, one step at a time, with steady breaths and eyes fixed forward.
+                        </div>
+                    </div>
+
+                
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/home4.jpg)">
+                    </div>
+
+                    <div class="img-text-wrapper">
+                        <div class="title">
+                            Journal.
+                        </div>
+                        <div class="subtitle">
+                            Writing is something I am willing to sit still for, to begin again and again. Like groping for flickers of light amidst the dimness, persistently searching for the intangible meaning captured within these alphabetical combinations.
+                        </div>
+                    </div>
+
+                
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+   
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.add('img-blur');
+        });
+
+        portfolioItem.addEventListener('mouseout', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.remove('img-blur');
+        });
+
+    });
+</script>
+</html>
