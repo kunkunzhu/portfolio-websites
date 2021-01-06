@@ -15,90 +15,123 @@
 
     <div class="container">
 
-        <div class="intro">
+        <div class="nav-wrapper">
+            <div class="left-side">
 
-            <div>
-                
-                <img class="profile-image" src="images/download.png">
-                
-                <h1 class="cool-class">
-                    Hello! My name is Kun 🌟 
-            </h1 class="cool-class">
-                <h3>I'm a 1st year student studying Mathematics at the University of Waterloo.</h3>
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Portfolio</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
             </div>
 
-
-        </div>
-
-        <hr />
-        <div class="about-grid">
-
-            <div class="about-section">
+            <div class="center">
                 <div class="tagline">
                     <div>A newbie eager to learn more about the tech world 🤩</div>
                 </div>
-            <div>
-            
-            <div class="about-section">
-              <p>Some facts about me:</p>
-                <ul class="about-list">
-                <li>Would happily spend the entire day inside a bookstore.</li>
-                <li>Listening to music (especially indie pop and R&B) motivates me to write my code.</li>
-                <li>Adores creative expression of all forms.</li>
-                </ul>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <div>Kun Zhu</div>
+                </div>
             </div>
 
         </div>
-        <hr />
 
+        <div class="content-wrapper">
+            <div class="items-wrapper">
+                <div class="item-wrapper">
+                    <div class="img-background" style="background-image:url(images/art1.jpg)">
+                    </div>
+
+                    <div class="text-wrapper">
+                        <div class="title">
+                            A
+                        </div>
+                        <div class="subtitle">
+                            Description.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="items-wrapper">
+                <div class="item-wrapper">
+                    <div class="img-background" style="background-image:url(images/UNI.jpg)">
+                    </div>
+
+                    <div class="text-wrapper">
+                        <div class="title">
+                            B
+                        </div>
+                        <div class="subtitle">
+                            Description.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="items-wrapper">
+                <div class="item-wrapper">
+                    <div class="img-background" style="background-image:url(images/home4.jpg)">
+                    </div>
+
+                    <div class="text-wrapper">
+                        <div class="title">
+                            C
+                        </div>
+                        <div class="subtitle">
+                            Description.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="items-wrapper">
+                <div class="item-wrapper">
+                    <div class="img-background" style="background-image:url(images/ADK_0001.jpg)">
+                    </div>
+
+                    <div class="text-wrapper">
+                        <div class="title">
+                            D
+                        </div>
+                        <div class="subtitle">
+                            Description.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
 
-        <div>
+        <script>
+            const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+           
+            portfolioItems.forEach(portfolioItem => {
+                portfolioItem.addEventListener('mouseover', () => {
+                    console.log(portfolioItem.childNodes[1].classList)
+                    portfolioItem.childNodes[1].classList.add('img-blur');
+                });
+        
+                portfolioItem.addEventListener('mouseout', () => {
+                    console.log(portfolioItem.childNodes[1].classList)
+                    portfolioItem.childNodes[1].classList.remove('img-blur');
+                });
+        
+            });
+        </script>
 
-            <h2 class="heading">Projects</h2>
-            <div class="proj-grid">
-                <img class="proj-img" src="images/art1.jpg" />
-                <img class="proj-img" src="images/UNI.jpg" />
-                <img class="proj-img" src="images/home4.jpg" />
-                <img class="proj-img" src="images/ADK_0001.JPG" />
-            </div>
-        </div>
-
-        <div>
-            <h3 class="heading">Find me elsewhere 🌟: </h3>
-            <div class="contact">
-                <div class="links">
-                    <h4 class="form-heading" >Links</h4>
-                    <ul class="links-list">
-                        <li>
-                            <a href="https://github.com/kunkunzhu">Github</a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/kun-zhu-05b53a193/">Linkedin</a>
-                        </li>
-                        <li>
-                            <a href="mailto:zkzhu@uwaterloo.ca">Email</a>
-                        </li>
-                    </ul>
-            </div>
-            
-            <div>
-                <form action="#">
-                    <label for="email">
-                        <h4 class="form-heading">Email</h4>
-                        <input type="email" id="email" placeholder="Enter your email" />
-                    </label>
-                    <label for="message">
-                        <h4 class="form-heading">Messages</h4>
-                        <textarea id="message">Your Message</textarea>
-                    </label>
-                    <div class="submit-button-wrapper">
-                        <input type="submit" valid="Send Message" />
-                    </div>
-                </form>
-            </div>
-
-        </div>
+    </div>
 
 </body>
 
